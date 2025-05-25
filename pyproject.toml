@@ -5,7 +5,7 @@ description = "100 days of learning agent-driven AI systems."
 requires-python = ">=3.12"
 dependencies = [
     "openai",
-    "openai-agents", 
+    "openai-agents",
     "openai-agents[viz]",
     "openai-agents[litellm]",
     "litellm",
@@ -17,8 +17,12 @@ dependencies = [
     "scipy",
     "scikit-learn",
     "numpy",
+    "google-adk>=1.0.0",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentz"]
